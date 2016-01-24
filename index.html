@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
 
-    <title>reveal.js – The HTML Presentation Framework</title>
+    <title>When Scala Meets Docker</title>
 
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="An overview of Docker and how to make more out of it using Scala">
+    <meta name="author" content="rtfpessoa - Rodrigo Fernandes">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -38,395 +38,669 @@
 <body>
 
 <div class="reveal">
-
-    <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
         <section>
-            <h1>Reveal.js</h1>
-            <h3>The HTML Presentation Framework</h3>
-            <p>
-                <small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a>
+            <h1 style="text-align: right;">
+                <b style="vertical-align: middle;">When </b>
+                <img src="images/scala-spiral.png"
+                     style="background: none; border: none; height: 120px; vertical-align: middle;">
+            </h1>
+            <h1 style="text-align: right;">
+                <b style="vertical-align: middle;">meets </b>
+                <img src="images/docker-ship.png"
+                     style="background: none; border: none; height: 120px; vertical-align: middle;">
+            </h1>
+            <p style="text-align: right;">
+                <small>
+                    <a href="https://github.com/rtfpessoa">Rodrigo Fernandes</a> / <a
+                        href="http://twitter.com/rtfpessoa">@rtfpessoa</a>
                 </small>
             </p>
-        </section>
 
-        <section>
-            <h2>Hello There</h2>
-            <p>
-                reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will
-                show you examples of what it can do.
-            </p>
-        </section>
-
-        <!-- Example of nested vertical slides -->
-        <section>
-            <section>
-                <h2>Vertical Slides</h2>
-                <p>Slides can be nested inside of each other.</p>
-                <p>Use the <em>Space</em> key to navigate through all slides.</p>
-                <br>
-                <a href="#" class="navigate-down">
-                    <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png"
-                         alt="Down arrow">
-                </a>
-            </section>
-            <section>
-                <h2>Basement Level 1</h2>
-                <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-            </section>
-            <section>
-                <h2>Basement Level 2</h2>
-                <p>That's it, time to go back up.</p>
-                <br>
-                <a href="#/2">
-                    <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png"
-                         alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-                </a>
-            </section>
-        </section>
-
-        <section>
-            <h2>Slides</h2>
-            <p>
-                Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a
-                    href="http://slides.com" target="_blank">http://slides.com</a>.
-            </p>
-        </section>
-
-        <section>
-            <h2>Point of View</h2>
-            <p>
-                Press <strong>ESC</strong> to enter the slide overview.
-            </p>
-            <p>
-                Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>.
-                Alt + click anywhere to zoom back out.
-            </p>
-        </section>
-
-        <section>
-            <h2>Touch Optimized</h2>
-            <p>
-                Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your
-                slides.
-            </p>
-        </section>
-
-        <section data-markdown>
-            <script type="text/template">
-                ## Markdown support
-
-                Write content using inline or external Markdown.
-                Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-                ```
-                <section data-markdown>
-                    ## Markdown support
-
-                    Write content using inline or external Markdown.
-                    Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-                </section>
-                ```
-            </script>
-        </section>
-
-        <section>
-            <section id="fragments">
-                <h2>Fragments</h2>
-                <p>Hit the next arrow...</p>
-                <p class="fragment">... to step through ...</p>
-                <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span>
-                </p>
-
-                <aside class="notes">
-                    This slide has fragments which are also stepped through in the notes window.
-                </aside>
-            </section>
-            <section>
-                <h2>Fragment Styles</h2>
-                <p>There's different types of fragments, like:</p>
-                <p class="fragment grow">grow</p>
-                <p class="fragment shrink">shrink</p>
-                <p class="fragment fade-out">fade-out</p>
-                <p class="fragment current-visible">current-visible</p>
-                <p class="fragment highlight-red">highlight-red</p>
-                <p class="fragment highlight-blue">highlight-blue</p>
-            </section>
-        </section>
-
-        <section id="transitions">
-            <h2>Transition Styles</h2>
-            <p>
-                You can select from different transitions, like: <br>
-                <a href="?transition=none#/transitions">None</a> -
-                <a href="?transition=fade#/transitions">Fade</a> -
-                <a href="?transition=slide#/transitions">Slide</a> -
-                <a href="?transition=convex#/transitions">Convex</a> -
-                <a href="?transition=concave#/transitions">Concave</a> -
-                <a href="?transition=zoom#/transitions">Zoom</a>
-            </p>
-        </section>
-
-        <section id="themes">
-            <h2>Themes</h2>
-            <p>
-                reveal.js comes with a few themes built in: <br>
-                <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black
-                    (default)</a> -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a>
-                <br>
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a>
-                -
-                <a href="#"
-                   onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-            </p>
-        </section>
-
-        <section>
-            <section data-background="#dddddd">
-                <h2>Slide Backgrounds</h2>
-                <p>
-                    Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color
-                    formats are supported.
-                </p>
-                <a href="#" class="navigate-down">
-                    <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png"
-                         alt="Down arrow">
-                </a>
-            </section>
-            <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-                <h2>Image Backgrounds</h2>
-                <pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-            </section>
-            <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png"
-                     data-background-repeat="repeat" data-background-size="100px">
-                <h2>Tiled Backgrounds</h2>
-                <pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png"
-                    data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-            </section>
-            <section
-                    data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm"
-                    data-background-color="#000000">
-                <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-                    <h2>Video Backgrounds</h2>
-                    <pre><code class="hljs" style="word-wrap: break-word;">&lt;section
-                        data-background-video="video.mp4,video.webm"&gt;</code></pre>
-                </div>
-            </section>
-            <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-                <h2>... and GIFs!</h2>
-            </section>
-        </section>
-
-        <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-            <h2>Background Transitions</h2>
-            <p>
-                Different background transitions are available via the backgroundTransition option. This one's called
-                "zoom".
-            </p>
-            <pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-        </section>
-
-        <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-            <h2>Background Transitions</h2>
-            <p>
-                You can override background transitions per-slide.
-            </p>
-            <pre><code class="hljs" style="word-wrap: break-word;">&lt;section
-                data-background-transition="zoom"&gt;</code></pre>
-        </section>
-
-        <section>
-            <h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-                        function linkify( selector ) {
-                        if( supports3DTransforms ) {
-
-                        var nodes = document.querySelectorAll( selector );
-
-                        for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-                        var node = nodes[i];
-
-                        if( !node.className ) {
-                        node.className += ' roll';
-                        }
-                        }
-                        }
-                        }
-                    </code></pre>
-            <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.
-            </p>
-        </section>
-
-        <section>
-            <h2>Marvelous List</h2>
-            <ul>
-                <li>No order here</li>
-                <li>Or here</li>
-                <li>Or here</li>
-                <li>Or here</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Fantastic Ordered List</h2>
-            <ol>
-                <li>One is smaller than...</li>
-                <li>Two is smaller than...</li>
-                <li>Three!</li>
-            </ol>
-        </section>
-
-        <section>
-            <h2>Tabular Tables</h2>
-            <table>
-                <thead>
-                <tr>
-                    <th>Item</th>
-                    <th>Value</th>
-                    <th>Quantity</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Apples</td>
-                    <td>$1</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td>Lemonade</td>
-                    <td>$2</td>
-                    <td>18</td>
-                </tr>
-                <tr>
-                    <td>Bread</td>
-                    <td>$3</td>
-                    <td>2</td>
-                </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section>
-            <h2>Clever Quotes</h2>
-            <p>
-                These guys come in two forms, inline: <q
-                    cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-            </p>
-            <blockquote
-                    cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of
-                typewriters would
-                reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-            </blockquote>
-        </section>
-
-        <section>
-            <h2>Intergalactic Interconnections</h2>
-            <p>
-                You can link between slides internally,
-                <a href="#/2/3">like this</a>.
-            </p>
-        </section>
-
-        <section>
-            <h2>Speaker View</h2>
-            <p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a
-                timer, preview of the upcoming slide as well as your speaker notes.</p>
-            <p>Press the <em>S</em> key to try it out.</p>
-
-            <aside class="notes">
-                Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open
-                the speaker notes window (hit 's' on your keyboard).
+            <!-- Presenter Notes -->
+            <aside class="notes" data-markdown="">
+                Hi, thanks for coming.
+                Today I will talk about docker and how to take more from it when developping in Scala.
             </aside>
         </section>
 
         <section>
-            <h2>Export to PDF</h2>
-            <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>,
-                here's an example:</p>
-            <iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355"
-                    frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                    style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe>
-        </section>
-
-        <section>
-            <h2>Global State</h2>
-            <p>
-                Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-                will be added as a class to the document element when the slide is open. This lets you
-                apply broader style changes, like switching the page background.
-            </p>
-        </section>
-
-        <section data-state="customevent">
-            <h2>State Events</h2>
-            <p>
-                Additionally custom events can be triggered on a per slide basis by binding to the
-                <code>data-state</code> name.
-            </p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-                        Reveal.addEventListener( 'customevent', function() {
-                        console.log( '"customevent" has fired' );
-                        } );
-                    </code></pre>
-        </section>
-
-        <section>
-            <h2>Take a Moment</h2>
-            <p>
-                Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want
-                to take distracting slides off the screen.
-            </p>
-        </section>
-
-        <section>
-            <h2>Much more</h2>
+            <h2>Who am I?</h2>
             <ul>
-                <li>Right-to-left support</li>
-                <li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-                <li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-                <li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-                <li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+                <li>MSc in Information Systems and Computer Engineering from Instituto Superior Técnico (IST)</li>
+                <li>Software Engineer @ Codacy</li>
+                <li>Coder for fun and profit</li>
+                <li>😍 Scala </li>
+                <li>Open Source enthusiast on the free time (<a href="https://github.com/rtfpessoa">@rtfpessoa</a>)</li>
             </ul>
+            <img style="margin: 0 auto; height: 300px;" src="images/codacy.png">
+
+            <!-- Presenter Notes -->
+            <aside class="notes" data-markdown="">
+            </aside>
         </section>
 
-        <section style="text-align: left;">
-            <h1>THE END</h1>
-            <p>
-                - <a href="http://slides.com">Try the online editor</a> <br>
-                - <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-            </p>
+        <section>
+            <div class="fragment grow" data-autoslide="100"
+                 style="display: inline-block; margin: 10px; font-size: larger; color: #ccf3ff; font-weight: bold;"
+                 data-fragment-index="11">Functional
+            </div>
+            <div class="fragment shrink" data-autoslide="100"
+                 style="display: inline-block; margin: 10px; font-size: larger; color: #add8c9;"
+                 data-fragment-index="5">Object Oriented
+            </div>
+            <div class="fragment grow" data-autoslide="100"
+                 style="display: inline-block; font-size: larger; color: #0083a8; font-weight: bold;"
+                 data-fragment-index="9">Performing
+            </div>
+            <br>
+            <div class="fragment shrink" data-autoslide="100"
+                 style="display: inline-block; margin: 10px; font-size: larger; color: #E76B5F; font-weight: bold;"
+                 data-fragment-index="3">Statically typed
+            </div>
+            <div class="fragment grow" data-autoslide="100"
+                 style="display: inline-block; font-size: larger; color: #04c7c5; font-weight: bold;"
+                 data-fragment-index="8">Scalable
+            </div>
+            <br>
+            <div class="fragment grow" data-autoslide="100"
+                 style="display: inline-block; font-size: 100px; color: #de3423; font-weight: bold;"
+                 data-fragment-index="1">Scala
+            </div>
+            <br>
+            <div class="fragment shrink" data-autoslide="100"
+                 style="display: inline-block; font-size: larger; color: #ccf3ff; font-weight: bold;"
+                 data-fragment-index="10">Extensible
+            </div>
+            <div class="fragment grow"
+                 style="display: inline-block; font-size: larger; color: #aabbdd; font-weight: bold;"
+                 data-fragment-index="12">Modern
+            </div>
+            <div class="fragment shrink" data-autoslide="100"
+                 style="display: inline-block; font-size: larger; color: #eae4e3; font-weight: bold;"
+                 data-fragment-index="7">Compatible
+            </div>
+            <br>
+            <div class="fragment grow" data-autoslide="100"
+                 style="display: inline-block; font-size: larger; color: #E76B5F; font-weight: bold;"
+                 data-fragment-index="6">Flexible
+            </div>
+            <div class="fragment shrink" data-autoslide="100"
+                 style="display: inline-block; font-size: larger; color: #eeffff; font-weight: bold;"
+                 data-fragment-index="2">Expressive
+            </div>
+            <div class="fragment grow" data-autoslide="100"
+                 style="display: inline-block; font-size: larger; color: #ddaabb; font-weight: bold;"
+                 data-fragment-index="4">Fun
+            </div>
+
+            <!-- Presenter Notes -->
+            <aside class="notes" data-markdown="">
+                Scala is an amazing language.
+                It's functional
+                It's scalable
+                It's modern
+                It's flexible
+                It's fun
+            </aside>
         </section>
 
+        <section>
+            <img src="images/doge-meme.jpg" style="padding: 0; border: none; width: 750px; margin-top: -55px;"/>
+            <div class="fragment fade-in">
+                <div class="fragment grow"
+                     style="position: absolute; margin-left: 125px; top: 60%; color: whitesmoke; text-shadow: 2px 2px #000;">
+                    Very Modern! Such Scalable! Much Fun! Wow!
+                </div>
+            </div>
+
+            <!-- Presenter Notes -->
+            <aside class="notes" data-markdown="">
+            </aside>
+        </section>
+
+        <section>
+            <h2><b>But, how to develop and deploy?</b></h2>
+        </section>
+
+
+        <section>
+            <img src="images/docker-ship.png"
+                 style="background: none; border: none; width: 100%; vertical-align: middle;">
+        </section>
+
+        <section data-background-color="#008bb8"><h1 style="text-align: right;">
+            <b>Learn to Docker</b>
+        </h1>
+            <h1 style="text-align: right;">
+                <b>in</b>
+            </h1>
+            <h1 style="text-align: right;">
+                <b>
+                    <font color="#394d54">10</font> Minutes</b>
+            </h1>
+        </section>
+
+        <section>
+            <h2 style="text-align: left;">
+                <b>Docker, what and why?</b>
+            </h2>
+            <p><br></p>
+            <ul style="text-align: left;">
+                <li>is a lightweight container system (Portability, Control).</li>
+                <li>based on a slimmed down OS (Customization).</li>
+                <li>with processes, network and fs virtualization (Security, Isolation).</li>
+            </ul>
+
+            <!-- Presenter Notes -->
+            <aside class="notes" data-markdown="">
+                Docker is a very lightweight version of old good virtualization.
+
+                Some say it is not virtualization but in the end it introduces a slim layer between one process
+                and the way it accesses the fs, the network, etc.
+
+                It is not the regular type of virtualization but in the end it uses a slimmed down
+                OS fs with the basic binaries and libs.
+            </aside>
+        </section>
+
+        <section>
+            <section>
+                <h2 style="text-align: left;">
+                    <b>Docker, how?</b>
+                </h2>
+                <img src="images/docker-diagram.png">
+                <p style="font-size: 10px;">
+                    <a href="https://www.docker.com/sites/default/files/WP_Modern%20App%20Architecture%20for%20Enterprise%20-%20Jan%202016.pdf">
+                        https://www.docker.com/sites/default/files/WP_Modern%20App%20Architecture%20for%20Enterprise%20-%20Jan%202016.pdf</a>
+                </p>
+
+                <!-- Presenter Notes -->
+                <aside class="notes" data-markdown="">
+                    The way most people use docker is divided in three main phases: Build, Ship, Run.
+                    * Build - is basically the step where you describe your docker and create the image.
+                    * Ship - is how you make it available in multiple places, just like you currently do with jars.
+                    * Run - after all the previous steps now you can launch your work and as any other app you need to monitor it and scale.
+                </aside>
+            </section>
+
+            <section>
+                <h2><b>Let's start with something</b></h2>
+                <h2 class="fragment grow"><b>more</b></h2>
+                <h2><b>familiar</b></h2>
+            </section>
+
+            <section>
+                <h2 style="text-align: left;">
+                    <b>Docker, basics?</b>
+                </h2>
+                <ul>
+                    <li>Dockerfile</li>
+                    <li>Image</li>
+                    <li>Container</li>
+                </ul>
+
+                <!-- Presenter Notes -->
+                <aside class="notes" data-markdown="">
+                    Docker has three main concepts: Dockerfiles, Images and Containers.
+                </aside>
+            </section>
+
+            <section>
+                <h2 style="text-align: left;">
+                    <b>Docker, dockerfile?</b>
+                </h2>
+                <ul>
+                    <li>Specification for the docker</li>
+                    <li>List of basic instructions (add, copy, move, run)</li>
+                </ul>
+                <p><br></p>
+                <h6>Immutable infrastructure (just like your code)</h6>
+                <ul>
+                    <li>Can be version controlled</li>
+                    <li>Same structure as in production</li>
+                    <li>No hot-fixes, every change is a new version</li>
+                </ul>
+
+                <!-- Presenter Notes -->
+                <aside class="notes" data-markdown="">
+                    The Dockerfile is the specification on what is going to compose your image.
+                    This is a very simple file which mainle contains instructions such as add, copy, move.
+                    Almost looks like we are doing assembly :)
+
+                    Why does this matter?
+                    This is a great way to manage your infraestructure, since you can version it, this is going to
+                    be the end of: "But it worked on my computer"
+                    No more hot fixes you forget to do in the other machines.
+                    All is stored in one central place completly replicaple and always comparable.
+                </aside>
+            </section>
+
+            <section>
+                <h2 style="text-align: left;">
+                    <b>Docker, image?</b>
+                </h2>
+                <ul>
+                    <li>Base fs to be launched</li>
+                    <li>Group of layers</li>
+                </ul>
+                <p><br></p>
+                <h6>Each version, one more layer</h6>
+                <ul>
+                    <li>Faster builds *</li>
+                    <li>Each change is only one more layer *</li>
+                </ul>
+
+                <!-- Presenter Notes -->
+                <aside class="notes" data-markdown="">
+                    Images are the result of building a Dockerfile.
+                    After the docker follows all the instructions in a Dockerfile it generates kind of a jar, in this case more
+                    like a tar. With all the files needed to run it later.
+
+                    Why does this matter?
+                    Like a version controle system images are a combination of layer, each layer is one more change in the final result.
+                    This bring some good performance improvements specially if you do not change the previous steps in the Dockerfile.
+                    Since it only needs to run the last steps and apply them over the last layer.
+                </aside>
+            </section>
+
+            <section>
+                <h2 style="text-align: left;">
+                    <b>Docker, container?</b>
+                </h2>
+                <ul>
+                    <li>Running version of an image</li>
+                    <li>One process*</li>
+                </ul>
+                <p><br></p>
+                <h6>Just run it</h6>
+                <ul>
+                    <li>Fast app startup times</li>
+                    <li>Isolation from the host</li>
+                    <li>Start, stop and start again</li>
+                </ul>
+
+                <!-- Presenter Notes -->
+                <aside class="notes" data-markdown="">
+                    When an image is running it is called container, and a container is usually one process defined on the Dockerfile
+                    running in an isolated environment.
+
+                    Why does this matter?
+                    Very easy to start from a clean state, no more cases where you have doubts if the program wrote somewhere
+                    you do not remember or if you have to start a virtualmachine, this is just fast*
+                </aside>
+            </section>
+        </section>
+
+        <section>
+            <h2 style="text-align: left;">
+                <b>Docker, installation?</b>
+            </h2>
+            <h6>Linux</h6>
+            <pre>
+                <code>
+apt-get update
+apt-get -y install linux-image-extra-$(uname -r)
+sh -c "wget -qO- https://get.docker.io/gpg | apt-key add -"
+sh -c "echo deb http://get.docker.io/ubuntu docker main\ > /etc/apt/sources.list.d/docker.list"
+apt-get update
+apt-get -y install lxc-docker
+                </code>
+            </pre>
+            <h6>OS X</h6>
+            <p><a href="https://github.com/docker/toolbox/releases">Docker Toolbox</a> (and VirtualBox or <a
+                    href="https://github.com/zchee/docker-machine-driver-xhyve">xhyve</a>)</p>
+
+            <!-- Presenter Notes -->
+            <aside class="notes" data-markdown="">
+                To install docker in your system it is not much hard, but still it could be so much better.
+                On OSs like Ubuntu it can be really simple, just run 6 commands and you are ready to start hacking.
+                If you are on OS X, it might take some more time.
+                Since docker does not support OS X natively it only runs in a linux VM.
+                Most people use the boot2docker vm which is a slim iso with only the parts you need.
+
+                Then after this you still need to run the vm with some visualization software and connect your docker client to it.
+                The easiest way it the Docker toolbox which uses virtualbox an provides a complete script to run this and manage the complete workflow.
+                You can also try xhyve which is a more native virtualization solution for OS X but it is still in early stages
+                and you can have some difficulties sharing folder with the VM.
+            </aside>
+        </section>
+
+        <section>
+            <section>
+                <h2 style="text-align: left;">
+                    <b>Now that all of you are docker experts...</b>
+                </h2>
+            </section>
+            <section>
+                <h2 style="text-align: left;">
+                    <b>Let's create a docker</b>
+                </h2>
+            </section>
+            <section>
+                <h2 style="text-align: left;">
+                    <b>Docker, creating a dockerfile?</b>
+                </h2>
+            <pre>
+                <code>
+FROM rtfpessoa/ubuntu-jdk8:latest
+RUN apt-get update
+RUN locale-gen en_US en_US.UTF-8
+RUN useradd -r -s /bin/false -d /srv dockerUser
+RUN chown -R dockerUser /srv
+USER dockerUser
+ENTRYPOINT /srv/bin/app.sh
+CMD ["defaultParam1","defaultParam2"]
+                </code>
+            </pre>
+            </section>
+            <section>
+                <h2 style="text-align: left;">
+                    <b>Docker, building the docker?</b>
+                </h2>
+                <pre>
+                    <code>
+docker build -t orgName/imageName:version .
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h2 style="text-align: left;">
+                    <b>Docker, running the docker?</b>
+                </h2>
+                <pre>
+                    <code>
+docker run orgName/imageName:version
+                    </code>
+                </pre>
+
+                <pre>
+                    <code>
+docker run -it --entrypoint bash orgName/imageName:version
+                    </code>
+                </pre>
+            </section>
+        </section>
+
+        <section>
+            <h2><b>But how to run an sbt/scala application?</b></h2>
+        </section>
+
+        <section>
+            <h2><b>Scala using docker</b></h2>
+            <ul>
+                <li>Dockerizing a Scala application</li>
+                <li>Testing with Docker</li>
+            </ul>
+
+            <!-- Presenter Notes -->
+            <aside class="notes" data-markdown="">
+                The most important parts about using docker with scala are creating a docker with your application,
+                running it and then being able to test it.
+            </aside>
+        </section>
+
+        <section>
+            <section>
+                <h2><b>Dockerizing a Scala application</b></h2>
+                <p><br></p>
+                <h6>Select a base image</h6>
+                <ul>
+                    <li>java:openjdk-8 (openjdk | ubuntu)</li>
+                    <li>frolvlad/alpine-oraclejdk8 (oracle jdk | alpine linux)</li>
+                    <li>rtfpessoa/ubuntu-jdk8:latest (oracle jdk | ubuntu)</li>
+                </ul>
+
+                <!-- Presenter Notes -->
+                <aside class="notes" data-markdown="">
+                    To run scala you need java, so the three best choices are:
+                </aside>
+            </section>
+            <section>
+                <h2><b>Dockerizing a Scala application</b></h2>
+                <p><br></p>
+                <h6>Integrate with sbt</h6>
+                <ul>
+                    <li><a href="https://github.com/marcuslonnberg/sbt-docker">sbt-docker</a> and <a href="https://github.com/sbt/sbt-assembly">sbt-assembly</a> (first lib, scala dsl, uses a fat jar)</li>
+                    <li><a href="https://github.com/sbt/sbt-native-packager">sbt-native-packager</a> (generic sbt packager, half dsl half strings)</li>
+                </ul>
+                <p><br></p>
+                <div style="font-size: 20px;">resource: <a href="http://www.tecnoguru.com/scala-akka-docker">sbt-docker presentation</a></div>
+            </section>
+            <section>
+                <h2><b>Dockerizing a Scala application</b></h2>
+                <p><br></p>
+                <h6>sbt-native-packager</h6>
+                <pre>
+                    <code>
+addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.0.6")
+                    </code>
+                </pre>
+                <pre>
+                    <code>
+enablePlugins(DockerPlugin)
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h2><b>Dockerizing a Scala application</b></h2>
+                <p><br></p>
+                <h6>sbt-native-packager</h6>
+                <pre>
+                    <code>
+import com.typesafe.sbt.SbtNativePackager._
+import com.typesafe.sbt.packager.Keys._
+
+dockerBaseImage := "rtfpessoa/ubuntu-jdk8:latest",
+dockerExposedPorts := Seq(9000),
+maintainer in Docker := "rtfpessoa &lt;rodrigo@codacy.com&gt;",
+defaultLinuxInstallLocation in Docker := "/srv",
+daemonUser in Docker := "dockerUser",
+version in Docker := version.value,
+dockerEntrypoint := Seq(s"bin/${name.value}" + " -Dconfig.file=conf/$PLAY_CONFIG_FILE -Dlogger.file=conf/$PLAY_LOG_FILE")
+dockerCommands := dockerCommands.value.flatMap {
+    case cmd@(Cmd("ADD", "codacy /codacy")) => List(cmd,
+        Cmd("RUN", "adduser --uid 2004 docker"))
+    case other => List(other)
+}
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h2><b>Dockerizing a Scala application</b></h2>
+                <p><br></p>
+                <h6>Publishing</h6>
+                <pre>
+                    <code>
+sbt docker:publishLocal
+                    </code>
+                </pre>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2><b>Testing with Docker</b></h2>
+                <ul>
+                    <li>Databases</li>
+                    <li>Services</li>
+                    <li>Micro-services</li>
+                </ul>
+
+                <!-- Presenter Notes -->
+                <aside class="notes" data-markdown="">
+                    Testing with external services can be a real pain in the ass.
+                    Specially when you have databases, services like a queues, or other external components of your own app.
+                </aside>
+            </section>
+            <section>
+                <h2><b>Testing with Docker</b></h2>
+                <p><br></p>
+                <h6>Workflow</h6>
+                <ul>
+                    <li>Start dbs and external services</li>
+                    <li>Run the tests</li>
+                    <li>Stop the containers and clean the environment</li>
+                </ul>
+
+                <!-- Presenter Notes -->
+                <aside class="notes" data-markdown="">
+                    Running the services before the test.
+                    Stopping the services, cleaning them, and doing this again, can be really hard.
+                </aside>
+            </section>
+            <section>
+                <h2><b>Can't we do better?</b></h2>
+            </section>
+            <section>
+                <img src="images/yes-we-can.gif" style="width: 700px;">
+                <h2><b>Yes we can!</b></h2>
+            </section>
+            <section>
+                <h2><b>Testing with Docker</b></h2>
+                <p>(<a href="https://github.com/whisklabs/docker-it-scala">docker-it-scala</a>)</p>
+                <h6>Mixin services</h6>
+                <pre>
+                    <code>
+trait DockerPostgresqlService extends DockerKit {
+    val DefaultDbPort = 5432
+    val postgresqlContainer = DockerContainer("postgresql:9.4.4")
+        .withPorts(DefaultDbPort -> None)
+        .withReadyChecker(DockerReadyChecker.LogLine(
+            _.contains("waiting for connections on port")
+        ))
+
+    abstract override def dockerContainers: List[DockerContainer] =
+        postgresqlContainer :: super.dockerContainers
+}
+                    </code>
+                </pre>
+
+                <!-- Presenter Notes -->
+                <aside class="notes" data-markdown="">
+                    docker-it-scala can solve most of your problems.
+                    I am still not much familiar with all the concepts of docker-it-scala, but it is a really
+                    amazing solution for your tests. You just specify traits, with the configuration for each service/docker.
+                    And if you mix them in your tests it will just make the lifecycle management for you.
+
+                    No more tests cleaning databases of running shell commands.
+                </aside>
+            </section>
+        </section>
+
+
+        <section>
+            <section>
+                <h2><b>Docker @ Codacy</b></h2>
+                <img style="height: 300px;" src="images/codacy.png">
+            </section>
+            <section>
+                <h2><b>Docker @ Codacy</b></h2>
+                <ul>
+                    <li>Deploy the infrastructure</li>
+                    <li>Dynamically deploy workers</li>
+                    <li>Run static analysis tools</li>
+                </ul>
+
+                <!-- Presenter Notes -->
+                <aside class="notes" data-markdown="">
+                    At codacy we are using docker everywhere.
+                    From the deployment of the main components behind our platform to our workers,
+                    which perform the jobs.
+                    And even to run parts of the jobs in a isolated and secure way.
+
+                    This helped us to easily identify problems and to make our app much more scalable.
+                </aside>
+            </section>
+            <section>
+                <h2><b>Docker @ Codacy</b></h2>
+                <p><br></p>
+                <h6>Deploy the infrastructure & Workers</h6>
+                <ul>
+                    <li>Amazon Elastic Beanstalk</li>
+                    <li>Amazon EC2</li>
+                    <li>Launch AMI with Ansible</li>
+                    <li>Self managed dockers</li>
+                </ul>
+
+                <!-- Presenter Notes -->
+                <aside class="notes" data-markdown="">
+                    For the main components we use amazon ebs which controls most of the deployment part.
+                    We just defined our components and it deploys dockers automatically.
+                    It is not perfect but it manages the health and life of the components.
+
+                    For the workers, since they are a much more customized part we have our own manager.
+                    We deploy hosts on EC2 with ansible and the we manage the containers from running to stopping them,
+                    without needing to have any concerns with servers being dirty or with dead processes.
+                    At least most of the time, sometimes the docker socket gets flooded and kind of gets stucked.
+                </aside>
+            </section>
+            <section>
+                <h2><b>Docker @ Codacy</b></h2>
+                <p><br></p>
+                <h6>Run static analysis tools</h6>
+                <ul>
+                    <li>Docker inside docker 😭</li>
+                    <li>Reduce process running scope</li>
+                    <li>Limit network connectivity</li>
+                    <li>Contained filesystem</li>
+                </ul>
+
+                <!-- Presenter Notes -->
+                <aside class="notes" data-markdown="">
+                    We use dockers for our tools so we can separate the code which can be from our users from the rest of the data.
+                </aside>
+            </section>
+            <section>
+                <h2><b>Docker @ Codacy</b></h2>
+                <p><br></p>
+                <h6>Example:</h6>
+                <a href="https://github.com/codacy/codacy-eslint">codacy/codacy-eslint</a>
+            </section>
+            <section>
+                <h2><b>Docker @ Codacy</b></h2>
+                <p><br></p>
+                <h6>You can create your own</h6>
+                <p><a href="http://docs.codacy.com/docs/tool-developer-guide">Tool Developer Guide</a></p>
+                <p class="fragment fade-in"><img style="height: 350px;" src="images/just-do-it.gif"></p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2><b>Summary</b></h2>
+                <ul>
+                    <li>Simplifies app development and deployment</li>
+                    <li>Easily integrates with sbt</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><b>Caveheats</b></h2>
+                <p><br></p>
+                <h6>If you dive deep be sure to take lot's of oxygen</h6>
+                <ul>
+                    <li>Breaking changes: permissions, security</li>
+                    <li>Performance of the fs</li>
+                    <li>Docker inside docker</li>
+                    <li>OS X non native support (mount more folders in the VM like /tmp and /private/var/folders)</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h1>
+                <b>Questions?</b>
+            </h1>
+            <p><b>Nah, we're running outta time. Seriously.</b></p>
+            <p><br></p>
+            <p><br></p>
+            <h6><b>This slide deck can be found on</b></h6>
+            <h6>
+                <b><a href="https://github.com/rtfpessoa/when-scala-meets-docker" target="_blank">rtfpessoa/when-scala-meets-docker</a></b>
+            </h6>
+        </section>
     </div>
-
 </div>
 
 <script src="lib/js/head.min.js"></script>
@@ -439,8 +713,13 @@
     Reveal.initialize({
         controls: true,
         progress: true,
+        slideNumber: true,
         history: true,
+        keyboard: true,
+        overview: true,
         center: true,
+        touch: true,
+        hideAddressBar: true,
 
         transition: 'slide', // none/fade/slide/convex/concave/zoom
 
